@@ -21,7 +21,9 @@ public class Principal {
 					+ "6 - Remover de uma posição específica \n"
 					+ "7 - Verificar se a lista esta vazia \n"
 					+ "8 - Verificar se a lista esta cheia \n"
-					+ "9 - xxx"));
+					+ "9 - Print da lista \n"
+					+ "10 - Percorre a lista \n"
+					+ "0 - Finaliza aplicação"));
 			
 			switch(opc) {
 			case 1: op.addInicio();
@@ -59,7 +61,9 @@ public class Principal {
 			break;
 			case 9: op.printlista();
 			break;
-			case 10: op.percorre();
+			case 10: System.out.println("String concatenada: " +op.percorre());
+			break;
+			case 0: JOptionPane.showMessageDialog(null, "Obrigado por utilizar a aplicação.");
 			break;
 
 			

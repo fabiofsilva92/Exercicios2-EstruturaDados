@@ -51,7 +51,7 @@ public class ExerciciosLista2 {
 			return true;
 		}
 		else {
-			System.out.println("Lista não esta cheia, temos " +(len-aux) + " posições." +len + aux);
+			System.out.println("Lista não esta cheia, temos " +(len-aux) + " posições.");
 			return false;
 		}
 	}
@@ -202,7 +202,7 @@ public class ExerciciosLista2 {
 		int position = 0;
 		do {
 		position = Integer.parseInt(JOptionPane.showInputDialog("Digite a posição do vetor que deseja selecionar: \n "
-				+ "obs: P/ remover , escolha uma posição entre a 1ª e a " +(auxTam) + "ª posição"
+				+ "obs: P/ remover , escolha uma posição entre a 1ª e a " +(auxTam) + "ª posição \n"
 						+ "P/ adicionar escolha entre a 1ª e a " +(auxTam + 1) + "ª posição"));
 		}while (position>auxTam+1);
 		return position-1;
