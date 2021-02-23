@@ -143,10 +143,19 @@ public class ExerciciosLista2 {
 		char removido = 0;
 		if(auxTam>0) {
 			int pos = getPosition();
+			if (pos>5) {
+				System.out.println("Posição escolhida maior que o vetor, será eliminado a ultima posição");
+				pos = 4;
+			}
 			removido = lista[pos];
 			if(pos>=0 && pos<lista.length) {
 				for(int i = pos; i<auxTam; i++) {
-					lista[i] = lista[i+1];
+					if(i == 4) {
+						lista[i] = lista[i];
+					}
+					else {
+						lista[i] = lista[i+1];
+					}
 				}
 				lista[auxTam-1] = 0;
 				auxTam--;
@@ -193,9 +202,24 @@ public class ExerciciosLista2 {
 		int position = 0;
 		do {
 		position = Integer.parseInt(JOptionPane.showInputDialog("Digite a posição do vetor que deseja selecionar: \n "
-				+ "obs: Escolha uma posição entre a 1ª e a " +(auxTam) + "ª posição"));
+				+ "obs: P/ remover , escolha uma posição entre a 1ª e a " +(auxTam) + "ª posição"
+						+ "P/ adicionar escolha entre a 1ª e a " +(auxTam + 1) + "ª posição"));
 		}while (position>auxTam+1);
 		return position-1;
+	}
+	//Percorre e atribui a uma string o conteúdo do vetor.
+	public String percorre() {
+		String percorrer = "";
+		if (auxTam == 0) {
+			System.out.println("Lista vazia!");
+		}
+		else {
+			for(int i = 0; i<auxTam; i++) {
+				percorrer = percorrer + lista[i] + " | ";
+			}
+		}
+		System.out.println(percorrer);
+		return percorrer;
 	}
 	
 }

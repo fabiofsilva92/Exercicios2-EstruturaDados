@@ -33,17 +33,23 @@ public class Principal {
 			case 3: op.addPosicao();
 			op.printlista();
 			break;
-			case 4:	System.out.println("Elemento deletado: " +op.removeInicio());
-			op.printlista();
-			break;
-			case 5: char verif = op.removeFinal();
-			if (verif != 0) {
+			case 4: char verif = op.removeInicio();
+			if(verif != 0) {
 				System.out.println("Elemento deletado: " +verif);
-			}				
+			}	
 			op.printlista();
 			break;
-			case 6: op.removePosicao();
-			op.printlista();
+			case 5: verif = op.removeFinal();
+					if (verif != 0) {
+						System.out.println("Elemento deletado: " +verif);
+					}				
+					op.printlista();
+			break;
+			case 6: verif = op.removePosicao();
+					if (verif != 0) {
+						System.out.println("Elemento deletado: " +verif);
+					}	
+					op.printlista();
 			break;
 			case 7: op.verLista();
 			op.printlista();
@@ -51,7 +57,9 @@ public class Principal {
 			case 8: op.verListaCheia();
 			op.printlista();
 			break;
-			case 10: op.printlista();
+			case 9: op.printlista();
+			break;
+			case 10: op.percorre();
 			break;
 
 			
